@@ -6,9 +6,12 @@ import { useState, useEffect } from 'react';
 interface StarsComponentProps
 {
     title: string;
+    index: number;
+    notation: number;
+    setNotations: void;
 }
 
-function StarsComponent({title}: StarsComponentProps)
+function StarsComponent(props: StarsComponentProps)
 {    
     const totalStars: number = 5;
     const [rating, setRating] = useState<number | null>(null);
@@ -29,6 +32,7 @@ function StarsComponent({title}: StarsComponentProps)
     useEffect(() => {
         if(rating != null && rating >= 1){            
             setIndexCliqued(rating);
+            props.setNotations(props.index, rating);
         }
         else{
             setIndexCliqued(0);
@@ -50,7 +54,7 @@ function StarsComponent({title}: StarsComponentProps)
 
     return(
         <div>
-            <h2 className="text-center text-2xl">{title}</h2>
+            <h2 className="text-center text-2xl">{props.title}</h2>
             <div className="">
                 {stars}
             </div>
