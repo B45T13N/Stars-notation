@@ -10,7 +10,7 @@ function TotalNotationComponent(props: TotalNotationComponentProps)
 {
     const totalStars: number = 5;
     const stopColor = "#f8d300";
-    const [starsData, setStarsData] = useState<boolean[]>(Array(totalStars).fill(false));
+    const [starsData] = useState<boolean[]>(Array(totalStars).fill(false));
 
     const createStars  = (average: number) => {
 

@@ -37,7 +37,7 @@ function StarsComponent(props: StarsComponentProps)
         else{
             setIndexClicked(0);
         }
-    }, [rating])
+    }, [props, rating])
 
 
     const stars = starsData.map((filled, index) => (

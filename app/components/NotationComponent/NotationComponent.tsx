@@ -2,7 +2,7 @@
 
 import StarsComponent from '../StarsComponent/StarsComponent'
 import TotalNotationComponent from "@/app/components/TotaleNotationComponent/TotalNotationComponent";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 function NotationComponent() {
     const [notations, setNotations] = useState<Array<number>>(new Array<number>(4).fill(-1))
